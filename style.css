@@ -1,0 +1,129 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     /* stop container moving out of screen */
+     /* usefull only when we dosent give width to  internal container */
+    
+}
+
+#container{
+     width: 100%;
+     /* border: solid; */
+     min-height: 100vh;
+     background: linear-gradient(135deg, #153677,#4e085f);
+     padding: 10px;  
+}
+#todo-app
+{
+     /* width: 250px; */
+     background-color: rgb(255, 255, 255);
+     /* width:100%;   */
+     max-width: 540px;
+     margin: 100px auto 20px;
+     /* top margin is 100px
+     right and left margins are auto
+     bottom margin is 20px */
+     padding: 40px 30px 70px;
+     border-radius: 10px;
+} 
+#todo-app h2
+{
+     color: #002765;
+     display: flex;
+     align-items: center;
+     margin-bottom: 20px;
+}
+#todo-app h2 img
+{
+     width: 30px;
+     margin-left:10px;
+}
+#row{
+     display: flex;
+     /* align-items: center; */
+     justify-content: space-between;
+     background: #edeefe;
+     /* ROW CONTAINER BG */
+     border-radius: 30px;
+     padding-left: 20px;    
+     /* move curser with place holder bit right */
+     margin-bottom: 25px;
+     /* increaase todo-app size bottom */
+     }
+     input{
+        flex: 1;
+        /* THIS IS COVERIG UP THE */
+         /* REMAINNIG SPACE BTW BUTTO AND INPUT BOX */
+        border: none;
+        outline: none;
+        background:transparent;
+        /* changes white to transparent so we can see 
+        background ash colour */
+         padding: 10px;
+        font-weight: 14px; 
+        }
+ button{
+            border: none;
+            outline: none;
+            padding: 16px 50px;
+            background: #ff5945;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 40px;
+           
+            } 
+ ul li{ 
+      list-style: none;
+       font-size: 17px;
+       padding: 12px 8px 12px 60px;
+      /* user-select: none; */
+       cursor: pointer;
+       position: relative;
+}
+ ul li::before
+{
+        content: '';
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background-image: url(unchecked.png);
+        background-size: contain;
+        background-position: center;
+        top: 12px;
+        left:8px;
+}
+ul li.checked
+{
+    color: #555;
+    text-decoration: line-through;
+
+}
+ ul li.checked::before
+{
+     background-image: url(checked.png);
+}
+ ul li span
+{
+     position: absolute;
+     /* Anchor point to position is li */
+     right: 0;
+     top: 5px;
+     width: 40px;
+     height: 40px;
+     font-size: 22px;
+     color: #555;
+      /* positiond  content in 
+      span without using flex  */
+     line-height: 40px;
+     text-align: center;
+     /* horizental align */
+     border-radius: 50%;
+     /* make span contianer round */
+}
+ul li span:hover{
+     background-color: #edeefe;
+}
+           
